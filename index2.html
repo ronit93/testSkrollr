@@ -13,59 +13,45 @@
             #section1, #section2, #section3, #footer {
                 border: 1px solid green;
             }
+
+            .gap {
+                border: 1px solid blue;
+            }
         </style>
     </head>
 
     <body>
-        <div style="z-index: -1; position: fixed; top: 0; left: 0; width: 100%; overflow: hidden;"
-            data-anchor-target="#section2"
-            data-top="height: 0%;"
-            data-bottom-top="height: 100%;"
-        >
-            <div style="z-index: -3; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: url(./under-desk.png); background-repeat: no-repeat; background-size: cover; background-position: center;"></div>
-        </div>
-
-        <div style="z-index: -2; position: fixed; top: 0; left: 0; width: 100%; overflow: hidden;"
-            data-anchor-target="#section3"
-            data-top="height: 0%;"
-            data-bottom-top="height: 100%;"
-        >
-            <div style="z-index: -4; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: url(./under-coffee.png); background-repeat: no-repeat; background-size: cover; background-position: center;"></div>
-        </div>
-
-        <div style="z-index: -3; position: fixed; top: 0; left: 0; width: 100%; overflow: hidden;"
-            data-anchor-target="#footer"
-            data-top="height: 0%;"
-            data-bottom-top="height: 100%;"
-        >
-            <div style="z-index: -5; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: url(./under-office.png); background-repeat: no-repeat; background-size: cover; background-position: center;"></div>
-        </div>
-
         <article>
-            <div id="section1" style="width: 100%; height: 300px; background-color: white;">
+            <div id="section1" style="width: 100%; height: 1200px; background-color: white;">
                 HELLO WORLD!
             </div>
 
             <!-- First parallax -->
-            <div class="gap" style="width: 100%; height: 240px; background-color: transparent;"></div>
-
-            <div id="section2" style="width: 100%; height: 0px; background-color: white;">
-                AGAIN
+            <div id="gap1" class="gap" style="width: 100%; height: 240px; overflow: hidden;">
+                <!-- Choice of height here is arbitrary -->
+                <!-- data-bottom-top depends on height -->
+                <div style="width: 100%; height: 480px; background-image: url(./big_coffee.jpg); background-size: cover; position: relative;" data-top-bottom="top: 0px;" data-bottom-top="top: -240px;">
+                </div>
             </div>
 
             <!-- Second parallax -->
-            <div class="gap" style="width: 100%; height: 240px; background-color: transparent;"></div>
-
-            <div id="section3" style="width: 100%; height: 0px; background-color: white;">
-                YOLO
+            <div id="gap2" class="gap" style="width: 100%; height: 240px; background-color: transparent; overflow: hidden;">
+                <!-- Choice of height here is arbitrary -->
+                <!-- data-bottom-top depends on height -->
+                <div style="width: 100%; height: 480px; background-image: url(./big_table.jpg); background-size: cover; position: relative;" data-top-bottom="top: 0px;" data-bottom-top="top: -240px;">
+                </div>
             </div>
 
             <!-- Third dummy parallax -->
+            <div id="gap3" class="gap" style="width: 100%; height: 240px; background-color: transparent; overflow: hidden;">
+                <!-- Choice of height here is arbitrary -->
+                <!-- data-bottom-top depends on height -->
+                <div style="width: 100%; height: 480px; background-image: url(./big_office.jpg); background-size: cover; position: relative;" data-top-bottom="top: 0px;" data-bottom-top="top: -240px;">
+                </div>
+            </div>
 
-            <div class="gap" style="width: 100%; height: 240px; background-color: transparent;"></div>
-
-            <div id="footer" style="width: 100%; height: 300px; background-color: white;">
-                FOOTER
+            <div id="footer" style="width: 100%; height: 800px; background-color: white;">
+                FOOTER, FULL SCROLL
             </div>
         </article>
 

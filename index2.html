@@ -21,6 +21,20 @@
     </head>
 
     <body>
+        <!--
+            Ronit:
+
+            Essentially, I realized that to achieve a parallax effect with images that are scaled to an arbitrary size,
+            requires that we either know the height of the image after its scaling (which is rather inelegant, and requires recomputation
+            on resize which can be expensive), or make the height of the image a free parameter. The latter makes for more elegant and
+            performant code.
+
+            Wrt our previous attempts using an out-of-order fixed images, this requires images that are the same size as the screen
+            (or scaled to the screen) which would be, in the first case, infeasible for multi-device, and in the second case,
+            sometimes ugly. Such an approach would be more appropriate for the "classic parallax" seen in some Web 2.0 longform articles,
+            where the image size is fixed and not variable and the document "scrolls through", as though the image were in a background plane
+            (that is of course the definition of parallax).
+        -->
         <article>
             <div id="section1" style="width: 100%; height: 1200px; background-color: white;">
                 HELLO WORLD!
